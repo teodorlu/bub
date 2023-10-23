@@ -21,11 +21,17 @@
 ;;
 ;;     $ echo 10 | ,, '(partial * 10)'
 ;;     100
+;;
+;;     $ echo 3 | ,, inc inc inc
+;;     6
 
 (defn -main [& args]
-  (let [value (edn/read *in*)
-        function (eval (read-string (str/join " " args)))]
-    (pprint/pprint (function value))))
+  (pprint/pprint
+   (reduce (fn [value fn-str]
+             ((eval (read-string fn-str))
+              value))
+           (edn/read *in*)
+           args)))
 
 (when (= *file* (System/getProperty "babashka.file"))
   (apply -main *command-line-args*))
