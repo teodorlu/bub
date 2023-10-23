@@ -1,8 +1,7 @@
 (ns teodorlu.bub.cmd.run
   (:require
    [clojure.edn :as edn]
-   [clojure.pprint :as pprint]
-   [clojure.string :as str]))
+   [clojure.pprint :as pprint]))
 
 ;; Install this script from Github with:
 ;;
