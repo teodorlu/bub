@@ -5,7 +5,7 @@
 
 ;; Install this script from Github with:
 ;;
-;;     bbin install io.github.teodorlu/bub --latest-sha --as ,, --main-opts '["-m" "teodorlu.bub.cmd.thread-first/-main"]'
+;;     bbin install io.github.teodorlu/bub --latest-sha --as ,,thread-first --main-opts '["-m" "teodorlu.bub.cmd.thread-first/-main"]'
 ;;
 ;; Install this script from a local directory with:
 ;;
