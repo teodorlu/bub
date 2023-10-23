@@ -20,6 +20,7 @@
 ;;     2
 ;;
 ;;     $ echo 10 | ,, '(partial * 10)'
+;;     100
 
 (defn -main [& args]
   (let [value (edn/read *in*)
